@@ -93,16 +93,16 @@
       "IncludeKeyframedBodies": true,
       "EditorAutoUpdate": true,
       "AgentHeight": 64,
-      "AgentRadius": 8,
-      "AgentStepSize": 18,
-      "AgentMaxSlope": 40,
+      "AgentRadius": 16,
+      "AgentStepSize": 10,
+      "AgentMaxSlope": 10,
       "ExcludedBodies": "",
       "IncludedBodies": ""
     }
   },
   "Title": "street",
   "Description": "",
-  "LastSaved": "2024-05-17T15:59:34.6663078-06:00",
+  "LastSaved": "2024-05-17T16:57:28.7434857-06:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
