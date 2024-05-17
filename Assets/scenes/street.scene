@@ -1,0 +1,109 @@
+{
+  "__guid": "d05185ce-045d-473d-bdce-e152e74eb9ba",
+  "GameObjects": [
+    {
+      "__guid": "e89e720c-ac52-4b81-aea0-7ec558c3e151",
+      "Flags": 0,
+      "Name": "Main Camera",
+      "Position": "0,0,125",
+      "Rotation": "0,0.08715574,0,0.9961947",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "69029329-55ed-451e-ac3d-706b12f7f6b8",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 90,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "__guid": "7ccc04a2-8d9d-4526-8b0e-e35c70439918",
+      "Flags": 0,
+      "Name": "Directional Light",
+      "Position": "0,0,200",
+      "Rotation": "0.5702604,0.1453273,-0.8084261,-0.01139191",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "3c408438-e3ff-42b9-bfb2-7c167550ef87",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "__guid": "bdee5ddd-134c-40c4-b898-69e4a5618f35",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "-353.3792,12.43733,303.2092",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true
+    },
+    {
+      "__guid": "db39ef70-e9cf-478e-8d06-497ab90329e0",
+      "Flags": 0,
+      "Name": "Map",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "e5ad5e45-3f05-4d60-af1b-3645d8d48259",
+          "MapName": "maps/street.vmap",
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": true,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 8,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "street",
+  "Description": "",
+  "LastSaved": "2024-05-17T15:59:34.6663078-06:00",
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}
