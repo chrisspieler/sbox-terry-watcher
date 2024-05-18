@@ -2,6 +2,23 @@
   "__guid": "d05185ce-045d-473d-bdce-e152e74eb9ba",
   "GameObjects": [
     {
+      "__guid": "1a973fc6-ad29-47e3-b121-f9b4ff5e5ad5",
+      "Flags": 0,
+      "Name": "Main Camera Angle",
+      "Position": "-30,0,125",
+      "Rotation": "0,0.08715574,0,0.9961947",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "CameraAngle",
+          "__guid": "059476c5-be30-4fb4-ba37-e314f2a3bf34",
+          "IsMain": false
+        }
+      ]
+    },
+    {
       "__guid": "e89e720c-ac52-4b81-aea0-7ec558c3e151",
       "Flags": 0,
       "Name": "Main Camera",
@@ -82,7 +99,67 @@
       "__guid": "8789850a-dc72-4914-a847-e02d1a805312",
       "Flags": 0,
       "Name": "Terry Destroyer",
-      "Position": "224,-480,0",
+      "Position": "224,-496,0",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "trigger",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "__Prefab": "prefabs/terry_destroyer.prefab"
+    },
+    {
+      "__guid": "0427b4d3-4994-4537-b428-edc3a4cf57f3",
+      "Flags": 0,
+      "Name": "Terry Destroyer (2)",
+      "Position": "-192,32,0.00004760706",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "trigger",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "__Prefab": "prefabs/terry_destroyer.prefab"
+    },
+    {
+      "__guid": "281d9675-2342-4c16-985d-6eca18925ecf",
+      "Flags": 0,
+      "Name": "Terry Destroyer (3)",
+      "Position": "512,768,0.00006219421",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "trigger",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "__Prefab": "prefabs/terry_destroyer.prefab"
+    },
+    {
+      "__guid": "5fbcf57f-2c7e-4b22-8156-928a24232d01",
+      "Flags": 0,
+      "Name": "Terry Destroyer (6)",
+      "Position": "1344,768,0.00006219421",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "trigger",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "__Prefab": "prefabs/terry_destroyer.prefab"
+    },
+    {
+      "__guid": "4dcd18d8-beb1-4d58-a656-46f90c5308e3",
+      "Flags": 0,
+      "Name": "Terry Destroyer (4)",
+      "Position": "448,-768,-0.0002428231",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "trigger",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "__Prefab": "prefabs/terry_destroyer.prefab"
+    },
+    {
+      "__guid": "c0fa1841-f7c0-4139-9330-01cb9f5b8fde",
+      "Flags": 0,
+      "Name": "Terry Destroyer (5)",
+      "Position": "1304,-768,-0.0002428231",
       "Rotation": "0,0,0.7071067,0.7071068",
       "Tags": "trigger",
       "Enabled": true,
@@ -94,7 +171,7 @@
       "__guid": "f94755da-45d1-4b79-88f5-0016f435a3f8",
       "Flags": 0,
       "Name": "Terry Destroyer (1)",
-      "Position": "272,464,0",
+      "Position": "272,496,0",
       "Rotation": "0,0,0.7071067,0.7071068",
       "Tags": "trigger",
       "Enabled": true,
@@ -114,7 +191,13 @@
       "Components": [
         {
           "__type": "TerrySpawner",
-          "__guid": "3406badc-2895-4168-bc4d-1e420f8dd854"
+          "__guid": "3406badc-2895-4168-bc4d-1e420f8dd854",
+          "Prefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/terry.prefab"
+          },
+          "Rarity": 10,
+          "TickDelay": 0.5
         }
       ]
     },
@@ -130,7 +213,123 @@
       "Components": [
         {
           "__type": "TerrySpawner",
-          "__guid": "6f318ebd-8efe-4822-8547-d6ea62ce88cc"
+          "__guid": "6f318ebd-8efe-4822-8547-d6ea62ce88cc",
+          "Prefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/terry.prefab"
+          },
+          "Rarity": 10,
+          "TickDelay": 0.5
+        }
+      ]
+    },
+    {
+      "__guid": "dfa716f4-9fa8-4536-8eb4-ce308d6ef046",
+      "Flags": 0,
+      "Name": "Terry Spawner (2)",
+      "Position": "-192,-32,-0.00002545159",
+      "Rotation": "0,0,0.0000002980232,-0.9999999",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "TerrySpawner",
+          "__guid": "0d7b4483-4f06-4ae8-bdd7-f32b0490a1d5",
+          "Prefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/terry.prefab"
+          },
+          "Rarity": 10,
+          "TickDelay": 0.5
+        }
+      ]
+    },
+    {
+      "__guid": "fa0d1d20-c7d5-4092-a749-19b335ff40a3",
+      "Flags": 0,
+      "Name": "Terry Spawner (3)",
+      "Position": "448,768,-0.0001943536",
+      "Rotation": "0,0,0.7071069,-0.7071065",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "TerrySpawner",
+          "__guid": "416117ed-0382-4361-97a1-e0a94c52fc8b",
+          "Prefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/terry.prefab"
+          },
+          "Rarity": 10,
+          "TickDelay": 0.5
+        }
+      ]
+    },
+    {
+      "__guid": "99046e6e-6f2d-4850-82c1-b81b89d1e2c1",
+      "Flags": 0,
+      "Name": "Terry Spawner (6)",
+      "Position": "1280,768,-0.0001943536",
+      "Rotation": "0,0,0.7071069,-0.7071065",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "TerrySpawner",
+          "__guid": "eb5d6f62-edfc-4792-b7f2-73045ae3d51a",
+          "Prefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/terry.prefab"
+          },
+          "Rarity": 10,
+          "TickDelay": 0.5
+        }
+      ]
+    },
+    {
+      "__guid": "cc465dee-1a7d-4150-aa8a-02afcaf6aff2",
+      "Flags": 0,
+      "Name": "Terry Spawner (4)",
+      "Position": "496,-752,-0.000177832",
+      "Rotation": "0,0,-0.7071064,-0.707107",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "TerrySpawner",
+          "__guid": "35868b8b-8aa8-4d98-a1ad-947b36ca8def",
+          "Prefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/terry.prefab"
+          },
+          "Rarity": 10,
+          "TickDelay": 0.5
+        }
+      ]
+    },
+    {
+      "__guid": "90df1389-3187-41e8-9280-b6eba2dd581b",
+      "Flags": 0,
+      "Name": "Terry Spawner (5)",
+      "Position": "1352,-752,-0.000177832",
+      "Rotation": "0,0,-0.7071064,-0.707107",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "TerrySpawner",
+          "__guid": "9c6e1348-d29b-4559-b953-f6edecbd512a",
+          "Prefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/terry.prefab"
+          },
+          "Rarity": 10,
+          "TickDelay": 0.5
         }
       ]
     },
@@ -168,106 +367,42 @@
       ]
     },
     {
-      "__guid": "aa4def38-3135-4f31-92a5-c6b6dff5da3d",
+      "__guid": "63ad4ca0-a95a-4453-b3c4-fd79735caff3",
       "Flags": 0,
-      "Name": "Terry",
-      "Position": "384,-2.698041,0",
-      "Tags": "terry",
+      "Name": "Street Block",
+      "Position": "0,-336,-6",
+      "Tags": "nav_block",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
         {
-          "__type": "Sandbox.CharacterController",
-          "__guid": "39337582-1b10-45cb-a962-285bd273f062",
-          "Acceleration": 10,
-          "Bounciness": 0.3,
-          "GroundAngle": 45,
-          "Height": 64,
-          "IgnoreLayers": "",
-          "Radius": 16,
-          "StepHeight": 18,
-          "UseCollisionRules": false
-        },
-        {
-          "__type": "TerryController",
-          "__guid": "eb435eb9-2c3a-4579-a375-c9bc5512906e",
-          "AnimationHelper": {
-            "_type": "component",
-            "component_id": "63cdba7d-0d3f-46b9-883a-e724e338d7e2",
-            "go": "203bc8d5-c270-4c1e-98b2-a1199726f372",
-            "component_type": "CitizenAnimationHelper"
-          },
-          "CharacterController": {
-            "_type": "component",
-            "component_id": "39337582-1b10-45cb-a962-285bd273f062",
-            "go": "aa4def38-3135-4f31-92a5-c6b6dff5da3d",
-            "component_type": "CharacterController"
-          },
-          "CrouchMoveSpeed": 100,
-          "CustomEyeAngle": false,
-          "InitialEyeAngle": "0,0,0",
-          "RunMoveSpeed": 190,
-          "ShouldCrouch": false,
-          "ShouldJump": false,
-          "ShouldRun": false,
-          "ShouldWalk": false,
-          "SprintMoveSpeed": 320,
-          "WalkMoveSpeed": 100
-        },
-        {
-          "__type": "DirectTerryController",
-          "__guid": "3771a196-e6fc-4829-8ddb-49086c214d66",
-          "UsePrefererredFov": true
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "2fdcc077-d896-4ab0-a815-65359f5d91a3",
+          "Center": "0,0,50",
+          "IsTrigger": false,
+          "Scale": "350,500,100",
+          "Static": false
         }
-      ],
-      "Children": [
+      ]
+    },
+    {
+      "__guid": "9577bb25-9eb7-4efb-84e9-6075c78b80f6",
+      "Flags": 0,
+      "Name": "Street Block (1)",
+      "Position": "0,336,-6",
+      "Tags": "nav_block",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
         {
-          "__guid": "203bc8d5-c270-4c1e-98b2-a1199726f372",
-          "Flags": 0,
-          "Name": "Body",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "cb04633a-5d63-410e-a496-eef03c4039b0",
-              "BodyGroups": 341,
-              "CreateBoneObjects": false,
-              "Model": "models/citizen/citizen.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.Citizen.CitizenAnimationHelper",
-              "__guid": "63cdba7d-0d3f-46b9-883a-e724e338d7e2",
-              "BodyWeight": 1,
-              "EyeSource": {
-                "_type": "gameobject",
-                "go": "44fff105-cfdd-4977-9fd5-8c9ed0f98864"
-              },
-              "EyesWeight": 1,
-              "HeadWeight": 1,
-              "LookAtEnabled": false,
-              "Target": {
-                "_type": "component",
-                "component_id": "cb04633a-5d63-410e-a496-eef03c4039b0",
-                "go": "203bc8d5-c270-4c1e-98b2-a1199726f372",
-                "component_type": "SkinnedModelRenderer"
-              }
-            }
-          ]
-        },
-        {
-          "__guid": "44fff105-cfdd-4977-9fd5-8c9ed0f98864",
-          "Flags": 0,
-          "Name": "Eye",
-          "Position": "0,0,64",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "272a3043-efaf-44fb-9e86-b23d77812a1d",
+          "Center": "0,0,50",
+          "IsTrigger": false,
+          "Scale": "350,500,100",
+          "Static": false
         }
       ]
     }
@@ -289,13 +424,13 @@
       "AgentRadius": 16,
       "AgentStepSize": 10,
       "AgentMaxSlope": 10,
-      "ExcludedBodies": "trigger",
+      "ExcludedBodies": "trigger,terry",
       "IncludedBodies": ""
     }
   },
   "Title": "street",
   "Description": "",
-  "LastSaved": "2024-05-18T15:08:48.7644415-06:00",
+  "LastSaved": "2024-05-18T17:13:12.6934131-06:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [

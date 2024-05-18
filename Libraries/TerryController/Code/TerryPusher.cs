@@ -1,5 +1,7 @@
 ﻿using Sandbox;
 
+namespace Duccsoft.Terry;
+
 [Group("Terry")]
 public sealed class TerryPusher : Component
 {

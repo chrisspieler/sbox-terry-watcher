@@ -1,17 +1,23 @@
 ﻿using Sandbox;
 using System.Linq;
 
-public sealed class DirectTerryController : Component
+namespace Duccsoft.Terry;
+
+public sealed class DirectTerryDriver : TerryDriver
 {
 	[ConVar( "camera_smoothing" )]
 	public static float CameraSmoothing { get; set; } = 0f;
 
-	[Property] public TerryController Controller { get; set; }
 	[Property] public bool UsePrefererredFov { get; set; } = true;
 
-	protected override void OnEnabled()
+	protected override void OnDisabled()
 	{
-		Controller ??= Components.Get<TerryController>();
+		base.OnDisabled();
+
+		if ( !Scene.Camera.IsValid() )
+			return;
+
+		// Scene.Camera.Transform.World 
 	}
 
 	protected override void OnUpdate()

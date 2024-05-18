@@ -1,0 +1,12 @@
+{
+  "UniformPreference": "Group",
+  "UniformPercent": 10,
+  "ExcludedUniforms": [],
+  "ExcludedClothing": [],
+  "ShirtPercent": 95,
+  "JacketPercent": 20,
+  "BottomPercent": 100,
+  "FootwearPercent": 100,
+  "__version": 0,
+  "__references": []
+}

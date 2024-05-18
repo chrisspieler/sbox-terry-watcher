@@ -1,12 +1,14 @@
-using System.Linq;
 using Sandbox;
 using Sandbox.Citizen;
+
+namespace Duccsoft.Terry;
 
 [Group( "Terry" )]
 [Title( "Terry Controller" )]
 public sealed partial class TerryController : Component
 {
 	[Property] public CharacterController CharacterController { get; set; }
+	[Property] public float KillPlaneLevel { get; set; } = -300f;
 	[Property] public float CrouchMoveSpeed { get; set; } = 64.0f;
 	[Property] public float WalkMoveSpeed { get; set; } = 190.0f;
 	[Property] public float RunMoveSpeed { get; set; } = 190.0f;
@@ -49,7 +51,13 @@ public sealed partial class TerryController : Component
 
 	protected override void OnUpdate()
 	{
+		if ( Transform.Position.z < KillPlaneLevel )
+		{
+			GameObject.Destroy();
+			return;
+		}
 		UpdateAnimation();
+
 	}
 
 	protected override void OnFixedUpdate()

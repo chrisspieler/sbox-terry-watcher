@@ -1,0 +1,12 @@
+{
+  "Name": "Swimwear",
+  "CharacteristicItems": [
+    "models/citizen_clothes/shorts/summer_shorts/summer shorts.clothing"
+  ],
+  "SupplementaryItems": [
+    "models/citizen_clothes/glasses/stylish_glasses/stylish_glasses_black.clothing",
+    "models/citizen_clothes/shoes/slippers/slippers.clothing"
+  ],
+  "__version": 0,
+  "__references": []
+}

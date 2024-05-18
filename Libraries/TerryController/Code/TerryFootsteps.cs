@@ -1,6 +1,8 @@
 ﻿using Sandbox;
 using Sandbox.Audio;
 
+namespace Duccsoft.Terry;
+
 [Group( "Terry" )]
 public sealed class TerryFootsteps : Component
 {
