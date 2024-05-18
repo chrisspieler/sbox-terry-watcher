@@ -100,7 +100,8 @@
         "__type": "Duccsoft.Terry.BotTerryDriver",
         "__guid": "79b66646-2d17-4e0b-92ed-9677a72bc2b3",
         "CurrentPath": [],
-        "TargetReachedDistance": 5
+        "LookLerpSpeed": 10,
+        "TargetReachedDistance": 7
       },
       {
         "__type": "Duccsoft.Terry.TerryPusher",
