@@ -22,7 +22,8 @@
         "facepunch.tree_oak_medium_a#33692",
         "facepunch.pavement_tile_01#28798",
         "facepunch.tree_oak_small_a#33693",
-        "titanovsky.streetbench#54791"
+        "titanovsky.streetbench#54791",
+        "facepunch.decal_street_line_marking_a#33807"
       ],
       "Metadata": {
         "SingleAssetSource": "maps/street.vmap"

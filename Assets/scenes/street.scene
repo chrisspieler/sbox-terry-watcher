@@ -133,6 +133,39 @@
           "__guid": "6f318ebd-8efe-4822-8547-d6ea62ce88cc"
         }
       ]
+    },
+    {
+      "__guid": "63624aec-ff00-461e-adc1-44c8d967f34e",
+      "Flags": 0,
+      "Name": "2D Skybox",
+      "Position": "0,0,48",
+      "Tags": "skybox",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "ac5d74ca-d1f3-4d06-8f8d-8ffa249f5f56",
+          "SkyMaterial": "6.vmat",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Rotator",
+          "__guid": "1318e9ba-e276-4f80-873d-df837ddfd000",
+          "RotationPerSecond": "0,0.2,0"
+        },
+        {
+          "__type": "SkyController",
+          "__guid": "0f4b877c-ff85-45b0-9cd1-3b0434b9739a",
+          "Clouds": {
+            "_type": "component",
+            "component_id": "ac5d74ca-d1f3-4d06-8f8d-8ffa249f5f56",
+            "go": "63624aec-ff00-461e-adc1-44c8d967f34e",
+            "component_type": "SkyBox2D"
+          }
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -158,8 +191,10 @@
   },
   "Title": "street",
   "Description": "",
-  "LastSaved": "2024-05-17T18:51:24.5245103-06:00",
+  "LastSaved": "2024-05-18T14:12:57.9117248-06:00",
   "ResourceVersion": 1,
   "__version": 1,
-  "__references": []
+  "__references": [
+    "wujekfoliarz.sl_skybox5"
+  ]
 }
