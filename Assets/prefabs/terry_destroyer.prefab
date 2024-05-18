@@ -1,0 +1,70 @@
+{
+  "RootObject": {
+    "__guid": "8789850a-dc72-4914-a847-e02d1a805312",
+    "Flags": 0,
+    "Name": "Terry Destroyer",
+    "Position": "224,-496,0",
+    "Rotation": "0,0,0.7071067,0.7071068",
+    "Tags": "trigger",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "Components": [
+      {
+        "__type": "TerryDestroyer",
+        "__guid": "aa323b25-3f2d-4158-bad1-0a3dcc41035c"
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "8eb4f5c9-30db-4f82-8a4d-2d02b48e8da2",
+        "Center": "0,0,25",
+        "IsTrigger": true,
+        "OnTriggerEnter": {
+          "__version": 7,
+          "__guid": "314e21ab-ef4e-44d6-a716-76742ff145ad",
+          "UserData": {
+            "Title": "On Trigger Enter"
+          },
+          "Variables": [],
+          "Nodes": [
+            {
+              "Id": 0,
+              "Type": "input"
+            }
+          ],
+          "Links": []
+        },
+        "Scale": "50,50,50",
+        "Static": false
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "1b322bdd-9244-42d4-a6c8-7d6b7e0ba62e",
+        "Flags": 0,
+        "Name": "Object",
+        "Position": "0,0,25",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "2570315f-1da5-4f18-9bee-7736a26a389a",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/dev/primary_white_trans.vmat",
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,0,0,0.6"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

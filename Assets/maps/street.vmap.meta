@@ -21,7 +21,8 @@
         "facepunch.floor_grass_dirt_weed_blend_a#18756",
         "facepunch.tree_oak_medium_a#33692",
         "facepunch.pavement_tile_01#28798",
-        "facepunch.tree_oak_small_a#33693"
+        "facepunch.tree_oak_small_a#33693",
+        "titanovsky.streetbench#54791"
       ],
       "Metadata": {
         "SingleAssetSource": "maps/street.vmap"

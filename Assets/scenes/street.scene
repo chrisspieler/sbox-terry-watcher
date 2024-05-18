@@ -77,6 +77,62 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "8789850a-dc72-4914-a847-e02d1a805312",
+      "Flags": 0,
+      "Name": "Terry Destroyer",
+      "Position": "224,-480,0",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "trigger",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "__Prefab": "prefabs/terry_destroyer.prefab"
+    },
+    {
+      "__guid": "f94755da-45d1-4b79-88f5-0016f435a3f8",
+      "Flags": 0,
+      "Name": "Terry Destroyer (1)",
+      "Position": "272,464,0",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "trigger",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "__Prefab": "prefabs/terry_destroyer.prefab"
+    },
+    {
+      "__guid": "44193f72-cc59-436d-9b7f-73e9c95677d9",
+      "Flags": 0,
+      "Name": "Terry Spawner",
+      "Position": "272,-496,0",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "TerrySpawner",
+          "__guid": "3406badc-2895-4168-bc4d-1e420f8dd854"
+        }
+      ]
+    },
+    {
+      "__guid": "e8d8207f-322b-4a9d-9ac3-7ce83bd060f6",
+      "Flags": 0,
+      "Name": "Terry Spawner (1)",
+      "Position": "224,496,0",
+      "Rotation": "0,0,0.7071069,-0.7071066",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "TerrySpawner",
+          "__guid": "6f318ebd-8efe-4822-8547-d6ea62ce88cc"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -96,13 +152,13 @@
       "AgentRadius": 16,
       "AgentStepSize": 10,
       "AgentMaxSlope": 10,
-      "ExcludedBodies": "",
+      "ExcludedBodies": "trigger",
       "IncludedBodies": ""
     }
   },
   "Title": "street",
   "Description": "",
-  "LastSaved": "2024-05-17T16:57:28.7434857-06:00",
+  "LastSaved": "2024-05-17T18:51:24.5245103-06:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
