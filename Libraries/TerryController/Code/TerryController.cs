@@ -6,9 +6,6 @@ using Sandbox.Citizen;
 [Title( "Terry Controller" )]
 public sealed partial class TerryController : Component
 {
-	[ConVar( "camera_smoothing" )]
-	public static float CameraSmoothing { get; set; } = 0f;
-
 	[Property] public CharacterController CharacterController { get; set; }
 	[Property] public float CrouchMoveSpeed { get; set; } = 64.0f;
 	[Property] public float WalkMoveSpeed { get; set; } = 190.0f;
@@ -18,15 +15,29 @@ public sealed partial class TerryController : Component
 	[Property] public bool CustomEyeAngle { get; set; } = false;
 	[Property, ShowIf( nameof( CustomEyeAngle ), true )]
 	public Angles InitialEyeAngle { get; set; }
-	[Property] public bool UsePrefererredFov { get; set; } = false;
 
 	[Property] public CitizenAnimationHelper AnimationHelper { get; set; }
 
+	[Property] public bool ShouldCrouch { get; set; }
+	[Property] public bool ShouldWalk { get; set; }
+	[Property] public bool ShouldRun { get; set; }
+	[Property] public bool ShouldJump { get; set; }
+
 	[Sync] public bool Crouching { get; set; }
-	[Sync] public Angles EyeAngles { get; set; }
+	[Sync] public Angles EyeAngles 
+	{
+		get => _eyeAngles; 
+		set
+		{
+			var angles = value;
+			angles.pitch = angles.pitch.Clamp( -90, 90 );
+			angles.roll = 0f;
+			_eyeAngles = angles;
+		}
+	}
+	private Angles _eyeAngles;
 	[Sync] public Vector3 WishVelocity { get; set; }
 
-	public bool WishCrouch;
 	public float EyeHeight = 64;
 
 	protected override void OnStart()
@@ -38,11 +49,6 @@ public sealed partial class TerryController : Component
 
 	protected override void OnUpdate()
 	{
-		if ( !IsProxy )
-		{
-			MouseInput();
-		}
-
 		UpdateAnimation();
 	}
 
@@ -52,17 +58,8 @@ public sealed partial class TerryController : Component
 			return;
 
 		Transform.Rotation = new Angles( 0, EyeAngles.yaw, 0 );
-		CrouchingInput();
-		MovementInput();
-	}
-
-	private void MouseInput()
-	{
-		var e = EyeAngles;
-		e += Input.AnalogLook;
-		e.pitch = e.pitch.Clamp( -90, 90 );
-		e.roll = 0.0f;
-		EyeAngles = e;
+		UpdateCrouch();
+		UpdateMovement();
 	}
 
 	float CurrentMoveSpeed
@@ -70,16 +67,16 @@ public sealed partial class TerryController : Component
 		get
 		{
 			if ( Crouching ) return CrouchMoveSpeed;
-			if ( Input.Down( "run" ) ) return SprintMoveSpeed;
-			if ( Input.Down( "walk" ) ) return WalkMoveSpeed;
+			if ( ShouldRun ) return SprintMoveSpeed;
+			if ( ShouldWalk ) return WalkMoveSpeed;
 
 			return RunMoveSpeed;
 		}
 	}
 
-	RealTimeSince lastGrounded;
-	RealTimeSince lastUngrounded;
-	RealTimeSince lastJump;
+	public RealTimeSince LastGrounded { get; private set; }
+	public RealTimeSince LastUngrounded { get; private set; }
+	public RealTimeSince LastJump { get; private set; }
 
 	float GetFriction()
 	{
@@ -89,7 +86,7 @@ public sealed partial class TerryController : Component
 		return 0.2f;
 	}
 
-	private void MovementInput()
+	private void UpdateMovement()
 	{
 		if ( CharacterController is null )
 			return;
@@ -98,11 +95,10 @@ public sealed partial class TerryController : Component
 
 		Vector3 halfGravity = Scene.PhysicsWorld.Gravity * Time.Delta * 0.5f;
 
-		WishVelocity = Input.AnalogMove;
-
-		if ( lastGrounded < 0.2f && lastJump > 0.3f && Input.Pressed( "jump" ) )
+		if ( LastGrounded < 0.2f && LastJump > 0.3f && ShouldJump )
 		{
-			lastJump = 0;
+			ShouldJump = false;
+			LastJump = 0;
 			cc.Punch( Vector3.Up * 300 );
 		}
 
@@ -162,11 +158,11 @@ public sealed partial class TerryController : Component
 
 		if ( cc.IsOnGround )
 		{
-			lastGrounded = 0;
+			LastGrounded = 0;
 		}
 		else
 		{
-			lastUngrounded = 0;
+			LastUngrounded = 0;
 		}
 	}
 	float DuckHeight = (64 - 36);
@@ -174,24 +170,22 @@ public sealed partial class TerryController : Component
 	bool CanUncrouch()
 	{
 		if ( !Crouching ) return true;
-		if ( lastUngrounded < 0.2f ) return false;
+		if ( LastUngrounded < 0.2f ) return false;
 
 		var tr = CharacterController.TraceDirection( Vector3.Up * DuckHeight );
 		return !tr.Hit; // hit nothing - we can!
 	}
 
-	public void CrouchingInput()
+	public void UpdateCrouch()
 	{
-		WishCrouch = Input.Down( "duck" );
-
-		if ( WishCrouch == Crouching )
+		if ( ShouldCrouch == Crouching )
 			return;
 
 		// crouch
-		if ( WishCrouch )
+		if ( ShouldCrouch )
 		{
 			CharacterController.Height = 36;
-			Crouching = WishCrouch;
+			Crouching = ShouldCrouch;
 
 			// if we're not on the ground, slide up our bbox so when we crouch
 			// the bottom shrinks, instead of the top, which will mean we can reach
@@ -207,58 +201,14 @@ public sealed partial class TerryController : Component
 		}
 
 		// uncrouch
-		if ( !WishCrouch )
+		if ( !ShouldCrouch )
 		{
 			if ( !CanUncrouch() ) return;
 
 			CharacterController.Height = 64;
-			Crouching = WishCrouch;
+			Crouching = ShouldCrouch;
 			return;
 		}
-
-
-	}
-
-	private void UpdateCamera()
-	{
-		var camera = Scene.GetAllComponents<CameraComponent>().Where( x => x.IsMainCamera ).FirstOrDefault();
-		if ( camera is null ) return;
-
-		var targetEyeHeight = Crouching ? 18 : 42;
-		EyeHeight = EyeHeight.LerpTo( targetEyeHeight, RealTime.Delta * 10.0f );
-
-		var targetCameraPos = Transform.Position + new Vector3( 0, 0, EyeHeight );
-
-		// smooth view z, so when going up and down stairs or ducking, it's smooth af
-		if ( lastUngrounded > 0.2f )
-		{
-			targetCameraPos.z = camera.Transform.Position.z.LerpTo( targetCameraPos.z, RealTime.Delta * 25.0f );
-		}
-
-		camera.Transform.Position = targetCameraPos;
-		if ( CameraSmoothing == 0f )
-		{
-			camera.Transform.Rotation = EyeAngles;
-		}
-		else
-		{
-			var smoothSpeed = CameraSmoothing.Remap( 0, 100, 30, 5 );
-			camera.Transform.Rotation = Rotation.Lerp( camera.Transform.Rotation, EyeAngles, Time.Delta * smoothSpeed );
-		}
-		if ( UsePrefererredFov )
-		{
-			camera.FieldOfView = Preferences.FieldOfView;
-		}
-	}
-
-	protected override void OnPreRender()
-	{
-		UpdateBodyVisibility();
-
-		if ( IsProxy )
-			return;
-
-		UpdateCamera();
 	}
 
 	private void UpdateAnimation()
@@ -278,13 +228,14 @@ public sealed partial class TerryController : Component
 		AnimationHelper.WithLook( lookDir, 1, 0.5f, 0.25f );
 	}
 
-	private void UpdateBodyVisibility()
+	public void SetBodyVisibility( bool visible )
 	{
 		if ( AnimationHelper is null )
 			return;
 
-		var renderMode = ModelRenderer.ShadowRenderType.On;
-		if ( !IsProxy ) renderMode = ModelRenderer.ShadowRenderType.ShadowsOnly;
+		var renderMode = visible
+			? ModelRenderer.ShadowRenderType.On
+			: ModelRenderer.ShadowRenderType.ShadowsOnly;
 
 		AnimationHelper.Target.RenderType = renderMode;
 
