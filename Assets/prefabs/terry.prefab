@@ -165,11 +165,12 @@
         "NetworkInterpolation": true,
         "Components": [
           {
-            "__type": "Sandbox.BoxCollider",
-            "__guid": "359ca3b6-f52f-4012-a508-cf8052773452",
-            "Center": "0,0,32",
+            "__type": "Sandbox.CapsuleCollider",
+            "__guid": "b31db393-5c56-4734-a446-d17858769ef1",
+            "End": "0,0,64",
             "IsTrigger": false,
-            "Scale": "8,8,64",
+            "Radius": 7,
+            "Start": "0,0,0",
             "Static": false
           }
         ]

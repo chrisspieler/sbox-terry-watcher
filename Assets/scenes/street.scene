@@ -44,6 +44,34 @@
           "Viewport": "0,0,1,1",
           "ZFar": 10000,
           "ZNear": 10
+        },
+        {
+          "__type": "Sandbox.Bloom",
+          "__guid": "fd8b71c4-2178-438f-9f8b-c7ca7959868d",
+          "BloomColor": {
+            "color": [
+              {
+                "c": "1,1,1,1"
+              },
+              {
+                "t": 1,
+                "c": "1,1,1,1"
+              }
+            ]
+          },
+          "BloomCurve": [
+            {
+              "y": 0.5
+            },
+            {
+              "x": 1,
+              "y": 1
+            }
+          ],
+          "Mode": "Additive",
+          "Strength": 0.21,
+          "Threshold": 0.27,
+          "ThresholdWidth": 0
         }
       ]
     },
@@ -63,7 +91,7 @@
           "__guid": "3c408438-e3ff-42b9-bfb2-7c167550ef87",
           "FogMode": "Enabled",
           "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
+          "LightColor": "0.95814,0.97977,1,1",
           "Shadows": true,
           "SkyColor": "0.05882,0.07451,0.08235,1"
         }
@@ -135,7 +163,7 @@
       "__guid": "5fbcf57f-2c7e-4b22-8156-928a24232d01",
       "Flags": 0,
       "Name": "Terry Destroyer (6)",
-      "Position": "1344,768,0.00006219421",
+      "Position": "1856,768,0.00006219421",
       "Rotation": "0,0,0.7071067,0.7071068",
       "Tags": "trigger",
       "Enabled": true,
@@ -159,8 +187,20 @@
       "__guid": "c0fa1841-f7c0-4139-9330-01cb9f5b8fde",
       "Flags": 0,
       "Name": "Terry Destroyer (5)",
-      "Position": "1304,-768,-0.0002428231",
+      "Position": "3016,-728,-0.0002428231",
       "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "trigger",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "__Prefab": "prefabs/terry_destroyer.prefab"
+    },
+    {
+      "__guid": "0bb0c645-b468-49ad-9791-b6826f52dfd5",
+      "Flags": 0,
+      "Name": "Terry Destroyer (7)",
+      "Position": "3064,712,-0.0002428231",
+      "Rotation": "0,0,0.7071069,-0.7071066",
       "Tags": "trigger",
       "Enabled": true,
       "NetworkMode": 2,
@@ -196,7 +236,7 @@
             "_type": "gameobject",
             "prefab": "prefabs/terry.prefab"
           },
-          "Rarity": 10,
+          "Rarity": 15,
           "TickDelay": 0.5
         }
       ]
@@ -218,7 +258,7 @@
             "_type": "gameobject",
             "prefab": "prefabs/terry.prefab"
           },
-          "Rarity": 10,
+          "Rarity": 15,
           "TickDelay": 0.5
         }
       ]
@@ -240,7 +280,7 @@
             "_type": "gameobject",
             "prefab": "prefabs/terry.prefab"
           },
-          "Rarity": 10,
+          "Rarity": 15,
           "TickDelay": 0.5
         }
       ]
@@ -262,7 +302,7 @@
             "_type": "gameobject",
             "prefab": "prefabs/terry.prefab"
           },
-          "Rarity": 10,
+          "Rarity": 100,
           "TickDelay": 0.5
         }
       ]
@@ -271,7 +311,7 @@
       "__guid": "99046e6e-6f2d-4850-82c1-b81b89d1e2c1",
       "Flags": 0,
       "Name": "Terry Spawner (6)",
-      "Position": "1280,768,-0.0001943536",
+      "Position": "1792,768,-0.0001943536",
       "Rotation": "0,0,0.7071069,-0.7071065",
       "Enabled": true,
       "NetworkMode": 2,
@@ -284,7 +324,7 @@
             "_type": "gameobject",
             "prefab": "prefabs/terry.prefab"
           },
-          "Rarity": 10,
+          "Rarity": 50,
           "TickDelay": 0.5
         }
       ]
@@ -306,7 +346,7 @@
             "_type": "gameobject",
             "prefab": "prefabs/terry.prefab"
           },
-          "Rarity": 10,
+          "Rarity": 100,
           "TickDelay": 0.5
         }
       ]
@@ -315,7 +355,7 @@
       "__guid": "90df1389-3187-41e8-9280-b6eba2dd581b",
       "Flags": 0,
       "Name": "Terry Spawner (5)",
-      "Position": "1352,-752,-0.000177832",
+      "Position": "3064,-712,-0.000177832",
       "Rotation": "0,0,-0.7071064,-0.707107",
       "Enabled": true,
       "NetworkMode": 2,
@@ -328,7 +368,29 @@
             "_type": "gameobject",
             "prefab": "prefabs/terry.prefab"
           },
-          "Rarity": 10,
+          "Rarity": 75,
+          "TickDelay": 0.5
+        }
+      ]
+    },
+    {
+      "__guid": "b0e092b6-1c7f-4372-afa6-016dded5a811",
+      "Flags": 0,
+      "Name": "Terry Spawner (7)",
+      "Position": "3016,696,-0.000177832",
+      "Rotation": "0,0,-0.7071071,0.7071063",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "TerrySpawner",
+          "__guid": "c20118bf-1cbf-499d-941d-13e10f884b0a",
+          "Prefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/terry.prefab"
+          },
+          "Rarity": 75,
           "TickDelay": 0.5
         }
       ]
@@ -370,7 +432,7 @@
       "__guid": "63ad4ca0-a95a-4453-b3c4-fd79735caff3",
       "Flags": 0,
       "Name": "Street Block",
-      "Position": "0,-336,-6",
+      "Position": "16,-464,-6",
       "Tags": "nav_block",
       "Enabled": true,
       "NetworkMode": 2,
@@ -381,7 +443,7 @@
           "__guid": "2fdcc077-d896-4ab0-a815-65359f5d91a3",
           "Center": "0,0,50",
           "IsTrigger": false,
-          "Scale": "350,500,100",
+          "Scale": "350,800,100",
           "Static": false
         }
       ]
@@ -390,7 +452,7 @@
       "__guid": "9577bb25-9eb7-4efb-84e9-6075c78b80f6",
       "Flags": 0,
       "Name": "Street Block (1)",
-      "Position": "0,336,-6",
+      "Position": "16,464,-6",
       "Tags": "nav_block",
       "Enabled": true,
       "NetworkMode": 2,
@@ -401,8 +463,30 @@
           "__guid": "272a3043-efaf-44fb-9e86-b23d77812a1d",
           "Center": "0,0,50",
           "IsTrigger": false,
-          "Scale": "350,500,100",
+          "Scale": "350,800,100",
           "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "aa8218d8-2ba7-47e8-8518-41eb70abeecb",
+      "Flags": 0,
+      "Name": "Point Light",
+      "Position": "272,-16,240",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.PointLight",
+          "__guid": "ef38a877-dc84-46ab-9e0c-d65b286dffcc",
+          "Attenuation": 0.02,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.01569,0.01569,0.00784,1",
+          "Radius": 3000,
+          "Shadows": false
         }
       ]
     }
@@ -421,7 +505,7 @@
       "IncludeKeyframedBodies": true,
       "EditorAutoUpdate": true,
       "AgentHeight": 64,
-      "AgentRadius": 16,
+      "AgentRadius": 8,
       "AgentStepSize": 10,
       "AgentMaxSlope": 10,
       "ExcludedBodies": "trigger,terry",
@@ -430,7 +514,7 @@
   },
   "Title": "street",
   "Description": "",
-  "LastSaved": "2024-05-18T17:13:58.724667-06:00",
+  "LastSaved": "2024-05-18T18:24:18.0354055-06:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [
