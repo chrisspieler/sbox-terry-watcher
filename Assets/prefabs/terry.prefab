@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "__guid": "a0bde2de-71da-434c-926e-56c5d2dbdff4",
+    "__guid": "7465d10e-89a0-47b4-9007-9201a6e03d62",
     "Flags": 0,
     "Name": "terry",
     "Tags": "terry",
@@ -10,7 +10,7 @@
     "Components": [
       {
         "__type": "Sandbox.CharacterController",
-        "__guid": "d051534f-9a4a-4eba-9171-edb59a346a0b",
+        "__guid": "61de3837-1981-4bfd-93f5-6e32c44a49e1",
         "Acceleration": 10,
         "Bounciness": 0.3,
         "GroundAngle": 45,
@@ -22,30 +22,30 @@
       },
       {
         "__type": "RandomTerryGenerator",
-        "__guid": "0b08ff6f-2119-4ce3-a99d-9189e9bb8b8c",
+        "__guid": "0025a6cc-fb1a-4997-9450-812a8108d64f",
         "BodyConfig": "body/default.bodcfg",
         "OutfitConfig": "data/watcher.clthcfg",
         "RandomizeOnStart": true,
         "Renderer": {
           "_type": "component",
-          "component_id": "24638ea3-2a79-4bfe-b30a-1ad74f7a24ff",
-          "go": "f4777d26-bba7-4346-85dd-54ba36ddb322",
+          "component_id": "0daade85-3c54-4737-ab49-fab49bad2f7e",
+          "go": "3c655302-bd57-4957-bf01-eb0db8c61ef7",
           "component_type": "SkinnedModelRenderer"
         }
       },
       {
         "__type": "Duccsoft.Terry.TerryController",
-        "__guid": "15392c71-20f1-4971-b0e6-ca2f9ce94fa7",
+        "__guid": "19906d18-c389-4e4f-b3d5-6391523167e8",
         "AnimationHelper": {
           "_type": "component",
-          "component_id": "e1809c0f-83d1-4c9e-86b4-70f62042e0bb",
-          "go": "f4777d26-bba7-4346-85dd-54ba36ddb322",
+          "component_id": "f1cedc14-0240-49b5-83ff-50b99c458cf0",
+          "go": "3c655302-bd57-4957-bf01-eb0db8c61ef7",
           "component_type": "CitizenAnimationHelper"
         },
         "CharacterController": {
           "_type": "component",
-          "component_id": "d051534f-9a4a-4eba-9171-edb59a346a0b",
-          "go": "a0bde2de-71da-434c-926e-56c5d2dbdff4",
+          "component_id": "61de3837-1981-4bfd-93f5-6e32c44a49e1",
+          "go": "7465d10e-89a0-47b4-9007-9201a6e03d62",
           "component_type": "CharacterController"
         },
         "CrouchMoveSpeed": 100,
@@ -62,11 +62,11 @@
       },
       {
         "__type": "Duccsoft.Terry.DirectTerryDriver",
-        "__guid": "a3994903-3b20-4cb0-9a32-3b9325994cc6",
+        "__guid": "c78b65d6-2f79-4be2-9b4e-3955f46aa556",
         "__enabled": false,
         "OnComponentDisabled": {
           "__version": 7,
-          "__guid": "a1a90bf5-6a4d-476c-8c08-b4f8c9110ac1",
+          "__guid": "405fe3c2-46dd-4003-bf7f-a15ed8c1db3e",
           "UserData": {
             "Title": "On Component Disabled",
             "ReferencedComponentTypes": []
@@ -98,20 +98,20 @@
       },
       {
         "__type": "Duccsoft.Terry.BotTerryDriver",
-        "__guid": "79b66646-2d17-4e0b-92ed-9677a72bc2b3",
+        "__guid": "22ee6371-6f2a-4b7c-a174-4a14ea2834e8",
         "CurrentPath": [],
-        "LookLerpSpeed": 10,
+        "LookLerpSpeed": 50,
         "TargetReachedDistance": 7
       },
       {
         "__type": "Duccsoft.Terry.TerryPusher",
-        "__guid": "0737ffc0-2174-4160-b348-b75177590a1f",
+        "__guid": "d568e03a-f057-450a-a4ed-08c9b025b6a7",
         "Radius": 50
       }
     ],
     "Children": [
       {
-        "__guid": "f4777d26-bba7-4346-85dd-54ba36ddb322",
+        "__guid": "3c655302-bd57-4957-bf01-eb0db8c61ef7",
         "Flags": 0,
         "Name": "Body",
         "Enabled": true,
@@ -120,7 +120,7 @@
         "Components": [
           {
             "__type": "Sandbox.SkinnedModelRenderer",
-            "__guid": "24638ea3-2a79-4bfe-b30a-1ad74f7a24ff",
+            "__guid": "0daade85-3c54-4737-ab49-fab49bad2f7e",
             "BodyGroups": 341,
             "CreateBoneObjects": false,
             "Model": "models/citizen/citizen.vmdl",
@@ -129,26 +129,49 @@
           },
           {
             "__type": "Sandbox.Citizen.CitizenAnimationHelper",
-            "__guid": "e1809c0f-83d1-4c9e-86b4-70f62042e0bb",
+            "__guid": "f1cedc14-0240-49b5-83ff-50b99c458cf0",
             "BodyWeight": 1,
             "EyeSource": {
               "_type": "gameobject",
-              "go": "d590c5e7-8afb-4c62-89fa-a8c13fd3e724"
+              "go": "0a8dcdf8-b864-44e7-b5d9-e5253252567f"
             },
             "EyesWeight": 1,
             "HeadWeight": 1,
             "LookAtEnabled": false,
             "Target": {
               "_type": "component",
-              "component_id": "24638ea3-2a79-4bfe-b30a-1ad74f7a24ff",
-              "go": "f4777d26-bba7-4346-85dd-54ba36ddb322",
+              "component_id": "0daade85-3c54-4737-ab49-fab49bad2f7e",
+              "go": "3c655302-bd57-4957-bf01-eb0db8c61ef7",
               "component_type": "SkinnedModelRenderer"
             }
+          },
+          {
+            "__type": "Duccsoft.Terry.TerryFootsteps",
+            "__guid": "4692e4ef-162d-46b4-b5f8-5f93cc5890ea",
+            "Controller": {
+              "_type": "component",
+              "component_id": "61de3837-1981-4bfd-93f5-6e32c44a49e1",
+              "go": "7465d10e-89a0-47b4-9007-9201a6e03d62",
+              "component_type": "CharacterController"
+            },
+            "Occlusion": false,
+            "Source": {
+              "_type": "component",
+              "component_id": "0daade85-3c54-4737-ab49-fab49bad2f7e",
+              "go": "3c655302-bd57-4957-bf01-eb0db8c61ef7",
+              "component_type": "SkinnedModelRenderer"
+            },
+            "TargetMixer": {
+              "Name": "game",
+              "Id": "8bc9ee03-6413-4a7a-801e-8319c058642c"
+            },
+            "VolumeScale": 3.5,
+            "WithInputOnly": false
           }
         ]
       },
       {
-        "__guid": "d590c5e7-8afb-4c62-89fa-a8c13fd3e724",
+        "__guid": "0a8dcdf8-b864-44e7-b5d9-e5253252567f",
         "Flags": 0,
         "Name": "Eye",
         "Position": "0,0,64",
@@ -157,7 +180,7 @@
         "NetworkInterpolation": true
       },
       {
-        "__guid": "87fa3ade-c314-4897-9fca-4123de706033",
+        "__guid": "d0077fa6-13f7-4742-a200-5133e763eba4",
         "Flags": 0,
         "Name": "Collider",
         "Enabled": true,
@@ -166,7 +189,7 @@
         "Components": [
           {
             "__type": "Sandbox.CapsuleCollider",
-            "__guid": "b31db393-5c56-4734-a446-d17858769ef1",
+            "__guid": "8135baaa-c127-4345-944c-5e1a9c566882",
             "End": "0,0,64",
             "IsTrigger": false,
             "Radius": 7,

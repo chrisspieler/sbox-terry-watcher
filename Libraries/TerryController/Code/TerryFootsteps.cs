@@ -11,6 +11,7 @@ public sealed class TerryFootsteps : Component
 	[Property] SkinnedModelRenderer Source { get; set; }
 	[Property] MixerHandle TargetMixer { get; set; }
 	[Property] public float VolumeScale { get; set; } = 1f;
+	[Property] public bool Occlusion { get; set; } = false;
 	[Property] public bool WithInputOnly { get; set; } = false;
 
 	protected override void OnEnabled()
@@ -80,6 +81,7 @@ public sealed class TerryFootsteps : Component
 
 		var handle = Sound.Play( sound, tr.HitPosition + tr.Normal * 5 );
 		handle.Volume *= e.Volume * VolumeScale;
+		handle.Occlusion = Occlusion;
 		handle.TargetMixer = TargetMixer.Get();
 	}
 }

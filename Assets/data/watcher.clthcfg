@@ -1,7 +1,15 @@
 {
   "UniformPreference": "Group",
-  "UniformPercent": 10,
-  "ExcludedUniforms": [],
+  "UniformPercent": 20,
+  "ExcludedUniforms": [
+    "uniform/armor.uniform",
+    "uniform/armor_2.uniform",
+    "uniform/army.uniform",
+    "uniform/boxer_blue.uniform",
+    "uniform/boxer_red.uniform",
+    "uniform/prisoner.uniform",
+    "uniform/swimwear.uniform"
+  ],
   "ExcludedClothing": [],
   "ShirtPercent": 95,
   "JacketPercent": 20,

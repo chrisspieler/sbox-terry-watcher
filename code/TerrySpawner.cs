@@ -17,17 +17,21 @@ public sealed class TerrySpawner : Component
 	}
 
 	[Button("Spawn Terry")]
-	public void Spawn()
+	public TerryController Spawn()
 	{
 		var terry = Prefab.Clone( Transform.World.WithScale( 1f ) );
 		terry.BreakFromPrefab();
 
+		var controller = terry.Components.Get<TerryController>();
+
 		var exit = GetExit();
 		if ( exit is null )
-			return;
+			return controller;
 
 		var botDriver = terry.Components.GetOrCreate<BotTerryDriver>();
 		botDriver.NavigateTo( exit.Transform.Position );
+
+		return controller;
 	}
 
 	[Button("Roll Spawn")]

@@ -48,11 +48,14 @@ public class BotTerryDriver : TerryDriver
 
 	protected override void DrawGizmos()
 	{
+		if ( !Controller.IsValid() )
+			return;
+
 		Gizmo.Draw.Color = Color.Green;
 
 		Gizmo.Draw.Arrow( Vector3.Zero, Controller.WishVelocity * 10f, 3, 1.5f );
 
-		if ( !Gizmo.IsSelected )
+		if ( !Gizmo.IsSelected || CurrentPath is null )
 			return;
 
 		for ( int i = 0; i < CurrentPath.Count; i++ )
