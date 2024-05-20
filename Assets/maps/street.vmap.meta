@@ -24,7 +24,20 @@
         "facepunch.tree_oak_small_a#33693",
         "titanovsky.streetbench#54791",
         "facepunch.decal_street_line_marking_a#33807",
-        "facepunch.wall_stone_brick_a1#28802"
+        "facepunch.wall_stone_brick_a1#28802",
+        "facepunch.floor_herringbone_brick_vc#18663",
+        "facepunch.doorframe_double_metal_a#33594",
+        "facepunch.stone_cladding_hs_01#33580",
+        "facepunch.beech_shrub_tall_small#29101",
+        "facepunch.soil_a#56893",
+        "facepunch.beech_shrub_wide_medium#29103",
+        "facepunch.beech_shrub_tall_medium#29100",
+        "facepunch.wood_plank_hs_01#33582",
+        "facepunch.railing#28892",
+        "facepunch.wood_wetrotten_a_hs#28992",
+        "facepunch.concrete_c_damaged_hs#28940",
+        "facepunch.stone_cladding_hs_blend_01#28979",
+        "facepunch.stone_trim_hs#28968"
       ],
       "Metadata": {
         "SingleAssetSource": "maps/street.vmap"

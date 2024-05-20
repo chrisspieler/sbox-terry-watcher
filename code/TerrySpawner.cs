@@ -31,6 +31,8 @@ public sealed class TerrySpawner : Component
 		var botDriver = terry.Components.GetOrCreate<BotTerryDriver>();
 		botDriver.NavigateTo( exit.Transform.Position );
 
+		OnTerrySpawned?.Invoke( controller );
+
 		return controller;
 	}
 

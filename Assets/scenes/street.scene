@@ -111,6 +111,7 @@
       "__guid": "db39ef70-e9cf-478e-8d06-497ab90329e0",
       "Flags": 0,
       "Name": "Map",
+      "Position": "0,-16,0",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -466,7 +467,7 @@
       "__guid": "63ad4ca0-a95a-4453-b3c4-fd79735caff3",
       "Flags": 0,
       "Name": "Street Block",
-      "Position": "16,-464,-6",
+      "Position": "16,-464,-5.999943",
       "Tags": "nav_block",
       "Enabled": true,
       "NetworkMode": 2,
@@ -583,15 +584,6 @@
           "Volume": 75
         }
       ]
-    },
-    {
-      "__guid": "f737fba9-0550-4951-9f7d-d5ba46d16cf6",
-      "Flags": 0,
-      "Name": "Debug",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": []
     }
   ],
   "SceneProperties": {
@@ -617,10 +609,10 @@
   },
   "Title": "street",
   "Description": "",
-  "LastSaved": "2024-05-18T21:43:29.1667782-06:00",
+  "LastSaved": "2024-05-20T17:35:00.8127543-06:00",
   "ResourceVersion": 1,
-  "__version": 1,
   "__references": [
     "wujekfoliarz.sl_skybox5"
-  ]
+  ],
+  "__version": 1
 }
