@@ -529,7 +529,7 @@
       "__guid": "c5ff4a42-1635-4595-8766-040ac1d40ee0",
       "Flags": 0,
       "Name": "City Sounds",
-      "Position": "-128,-58.69791,224",
+      "Position": "48,0.000004719568,160",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -584,6 +584,50 @@
           "Volume": 75
         }
       ]
+    },
+    {
+      "__guid": "2e7d614d-0cdc-46f1-9d12-45a0bfeb6734",
+      "Flags": 0,
+      "Name": "Point Light",
+      "Position": "1008,768,144",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.PointLight",
+          "__guid": "7ba6d569-86b2-485b-ae5b-a28891a7c5c4",
+          "Attenuation": 0.3,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "1,0.72713,0.48837,1",
+          "Radius": 800,
+          "Shadows": true
+        }
+      ]
+    },
+    {
+      "__guid": "d65d5d14-f65a-459a-b68f-42431823f208",
+      "Flags": 0,
+      "Name": "Point Light (1)",
+      "Position": "848,880,144",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.PointLight",
+          "__guid": "4e2a938d-6fa6-4a3b-8563-a20093c265a4",
+          "Attenuation": 0.3,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "1,0.72713,0.48837,1",
+          "Radius": 800,
+          "Shadows": true
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -609,7 +653,7 @@
   },
   "Title": "street",
   "Description": "",
-  "LastSaved": "2024-05-20T17:35:00.8127543-06:00",
+  "LastSaved": "2024-05-22T21:36:14.5992684-06:00",
   "ResourceVersion": 1,
   "__references": [
     "wujekfoliarz.sl_skybox5"
