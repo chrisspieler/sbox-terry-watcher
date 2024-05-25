@@ -1,5 +1,4 @@
 using Sandbox;
-using Sandbox.Citizen;
 
 namespace Duccsoft.Terry;
 
@@ -18,7 +17,7 @@ public sealed partial class TerryController : Component
 	[Property, ShowIf( nameof( CustomEyeAngle ), true )]
 	public Angles InitialEyeAngle { get; set; }
 
-	[Property] public CitizenAnimationHelper AnimationHelper { get; set; }
+	[Property] public TerryAnimationHelper AnimationHelper { get; set; }
 
 	[Property] public bool ShouldCrouch { get; set; }
 	[Property] public bool ShouldWalk { get; set; }
@@ -230,7 +229,7 @@ public sealed partial class TerryController : Component
 		AnimationHelper.IsGrounded = CharacterController.IsOnGround;
 		AnimationHelper.DuckLevel = Crouching ? 1.0f : 0.0f;
 
-		AnimationHelper.MoveStyle = CitizenAnimationHelper.MoveStyles.Walk;
+		AnimationHelper.MoveStyle = TerryAnimationHelper.MoveStyles.Walk;
 
 		var lookDir = EyeAngles.ToRotation().Forward * 1024;
 		AnimationHelper.WithLook( lookDir, 1, 0.5f, 0.25f );

@@ -1,11 +1,11 @@
 {
   "Title": "Terry Watcher",
   "Type": "game",
-  "Org": "local",
+  "Org": "duccsoft",
   "Ident": "terry_watcher",
   "Tags": null,
   "Schema": 1,
-  "Resources": null,
+  "Resources": "*",
   "PackageReferences": [],
   "EditorReferences": null,
   "Metadata": {

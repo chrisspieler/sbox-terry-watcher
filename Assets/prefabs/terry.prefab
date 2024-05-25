@@ -38,9 +38,9 @@
         "__guid": "19906d18-c389-4e4f-b3d5-6391523167e8",
         "AnimationHelper": {
           "_type": "component",
-          "component_id": "f1cedc14-0240-49b5-83ff-50b99c458cf0",
+          "component_id": "22853b24-b434-450d-8acd-cb5fca7bed21",
           "go": "3c655302-bd57-4957-bf01-eb0db8c61ef7",
-          "component_type": "CitizenAnimationHelper"
+          "component_type": "TerryAnimationHelper"
         },
         "CharacterController": {
           "_type": "component",
@@ -64,6 +64,12 @@
         "__type": "Duccsoft.Terry.DirectTerryDriver",
         "__guid": "c78b65d6-2f79-4be2-9b4e-3955f46aa556",
         "__enabled": false,
+        "Controller": {
+          "_type": "component",
+          "component_id": "19906d18-c389-4e4f-b3d5-6391523167e8",
+          "go": "7465d10e-89a0-47b4-9007-9201a6e03d62",
+          "component_type": "TerryController"
+        },
         "OnComponentDisabled": {
           "__version": 7,
           "__guid": "405fe3c2-46dd-4003-bf7f-a15ed8c1db3e",
@@ -99,6 +105,12 @@
       {
         "__type": "Duccsoft.Terry.BotTerryDriver",
         "__guid": "22ee6371-6f2a-4b7c-a174-4a14ea2834e8",
+        "Controller": {
+          "_type": "component",
+          "component_id": "19906d18-c389-4e4f-b3d5-6391523167e8",
+          "go": "7465d10e-89a0-47b4-9007-9201a6e03d62",
+          "component_type": "TerryController"
+        },
         "CurrentPath": [],
         "LookLerpSpeed": 50,
         "TargetReachedDistance": 7
@@ -128,8 +140,8 @@
             "Tint": "1,1,1,1"
           },
           {
-            "__type": "Sandbox.Citizen.CitizenAnimationHelper",
-            "__guid": "f1cedc14-0240-49b5-83ff-50b99c458cf0",
+            "__type": "Duccsoft.Terry.TerryAnimationHelper",
+            "__guid": "22853b24-b434-450d-8acd-cb5fca7bed21",
             "BodyWeight": 1,
             "EyeSource": {
               "_type": "gameobject",
@@ -204,6 +216,6 @@
   "MenuPath": null,
   "MenuIcon": null,
   "ResourceVersion": 1,
-  "__version": 1,
-  "__references": []
+  "__references": [],
+  "__version": 1
 }
