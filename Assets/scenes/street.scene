@@ -14,7 +14,8 @@
         {
           "__type": "CameraAngle",
           "__guid": "059476c5-be30-4fb4-ba37-e314f2a3bf34",
-          "IsMain": false
+          "IsMain": true,
+          "Name": "Main"
         }
       ]
     },
@@ -529,7 +530,7 @@
       "__guid": "c5ff4a42-1635-4595-8766-040ac1d40ee0",
       "Flags": 0,
       "Name": "City Sounds",
-      "Position": "48,0.000004719568,160",
+      "Position": "787.6174,0.0000488042,684.3319",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -538,12 +539,12 @@
           "__type": "Sandbox.SoundPointComponent",
           "__guid": "d0fff86a-60c7-4448-bf7b-f35a639f5524",
           "DistanceAttenuation": false,
-          "DistanceAttenuationOverride": false,
+          "DistanceAttenuationOverride": true,
           "Force2d": false,
           "MaxRepeatTime": 1,
           "MinRepeatTime": 1,
           "Occlusion": false,
-          "OcclusionOverride": false,
+          "OcclusionOverride": true,
           "OcclusionRadius": 32,
           "Pitch": 1,
           "PlayOnStart": true,
@@ -551,13 +552,13 @@
           "Reflections": false,
           "Repeat": false,
           "SoundEvent": "sounds/city_ambience.sound",
-          "SoundOverride": false,
+          "SoundOverride": true,
           "StopOnNew": false,
           "TargetMixer": {
-            "Name": "game",
-            "Id": "d26c7ea7-9347-45d5-8437-235d5e65fe7a"
+            "Name": "ambience",
+            "Id": "a99f52b9-9694-41e2-8b2c-903e0f82b2e6"
           },
-          "Volume": 1
+          "Volume": 0.1
         }
       ]
     },
@@ -581,7 +582,7 @@
             "Name": "music",
             "Id": "b5c1b766-fcc5-47d3-9dc3-e4103595a496"
           },
-          "Volume": 75
+          "Volume": 30
         }
       ]
     },
@@ -628,6 +629,24 @@
           "Shadows": true
         }
       ]
+    },
+    {
+      "__guid": "43ceacc7-5c70-4b85-bf5d-79b1e038907a",
+      "Flags": 0,
+      "Name": "Overhead Camera Angle",
+      "Position": "-944.6485,-850.8387,984.8708",
+      "Rotation": "-0.07601349,0.2450563,0.2863449,0.9231337",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "CameraAngle",
+          "__guid": "8b254683-89fd-4596-8235-8acfa51a3ee5",
+          "IsMain": false,
+          "Name": "Overhead"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -653,7 +672,7 @@
   },
   "Title": "street",
   "Description": "",
-  "LastSaved": "2024-05-25T01:54:13.3893932-06:00",
+  "LastSaved": "2024-05-25T02:28:18.70355-06:00",
   "ResourceVersion": 1,
   "__references": [
     "wujekfoliarz.sl_skybox5"

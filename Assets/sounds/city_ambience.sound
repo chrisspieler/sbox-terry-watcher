@@ -12,6 +12,6 @@
   "Transmission": true,
   "OcclusionRadius": 64,
   "DistanceAttenuation": true,
-  "__version": 0,
-  "__references": []
+  "__references": [],
+  "__version": 0
 }
